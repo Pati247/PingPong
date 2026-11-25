@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PingPong Puppy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>PingPong Puppy</h1>
+    <p class="subtitle">Table tenis game</p>
+
+    <div class="settings">
+        <h2>USTAWIENIA GRY</h2>
+
+        <label>
+            Prędkość:
+            <select id="speed">
+                <option value="3">Wolna</option>
+                <option value="5" selected>Normalna</option>
+                <option value="8">Szybka</option>
+                <option value="11">Bardzo szybka</option>
+            </select>
+        </label>
+
+        <label>
+            Kolor piłeczki:
+            <select id="ballColor">
+                <option value="#f4a6b8">Pastelowy róż</option>
+                <option value="#91c9e8">Pastelowy niebieski</option>
+                <option value="#ffffff">Biały</option>
+                <option value="#ffe47a" selected>Pastelowy żółty</option>
+            </select>
+        </label>
+
+        <label>
+            Kolor rakietek:
+            <select id="paddleColor">
+                <option value="#f4a6b8">Pastelowy róż</option>
+                <option value="#91c9e8">Pastelowy niebieski</option>
+                <option value="#ffffff">Biały</option>
+                <option value="#ffe47a">Pastelowy żółty</option>
+            </select>
+        </label>
+
+        <h2> WYBIERZ JAMNIKA </h2>
+
+        <label>
+            Skin lewego pieska:
+            <select id="skin1">
+                <option value="dark"> Jamnik podpalany</option>
+                <option value="fluffy"> Jamnik kremowy</option>
+                <option value="chocolate"> Jamnik czekoladowy</option>
+            </select>
+        </label>
+
+        <label>
+            Skin prawego pieska:
+            <select id="skin2">
+                <option value="dark"> Jamnik podpalany</option>
+                <option value="fluffy"> Jamnik kremowy</option>
+                <option value="chocolate"> Jamnik czekoladowy</option>
+            </select>
+        </label>
+
+        <button id="startButton">NOWA GRA</button>
+    </div>
+
+    <div class="score">
+        <span> Gracz 1: <span id="score1">0</span></span>
+        <span> Gracz 2: <span id="score2">0</span></span>
+    </div>
+
+    <canvas id="game" width="800" height="500"></canvas>
+
+    <p class="controls">
+        GRACZ 1: W / S
+        &nbsp;  &nbsp;
+        GRACZ 2: ↑ / ↓
+    </p>
+
+    <script src="game.js"></script>
+
+</body>
+</html>

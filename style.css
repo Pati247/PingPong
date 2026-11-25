@@ -1,0 +1,187 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px 15px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fffaf3;
+    color: #49382f;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    text-align: center;
+}
+
+/* Tytuł gry */
+
+h1 {
+    font-size: clamp(32px, 6vw, 55px);
+    color: #9b624c;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 0 #f1d8bd;
+}
+
+.subtitle {
+    color: #b48b76;
+    font-size: 17px;
+    letter-spacing: 3px;
+    margin: 5px 0 25px;
+    font-weight: bold;
+}
+
+/* Panel ustawień */
+
+.settings {
+    width: 100%;
+    max-width: 800px;
+    padding: 25px;
+    background: #fff4e8;
+    border: 3px solid #e6cbb3;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 7px 0 #dfc1a8;
+}
+
+.settings h2 {
+    color: #a76d56;
+    font-size: 19px;
+    letter-spacing: 2px;
+    margin: 10px 0 20px;
+}
+
+.settings label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 10px;
+    font-weight: bold;
+    color: #755648;
+}
+
+/* Listy wyboru */
+
+select {
+    background: #fffdf9;
+    color: #63483b;
+    border: 2px solid #e3c3a9;
+    border-radius: 14px;
+    padding: 10px 13px;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+}
+
+select:hover {
+    border-color: #bd8b70;
+    background: #fffaf3;
+}
+
+select:focus {
+    border-color: #b77c65;
+}
+
+/* Przycisk nowej gry */
+
+button {
+    display: block;
+    margin: 22px auto 5px;
+    padding: 14px 32px;
+    background: #d98d83;
+    color: white;
+    border: 2px solid #b9756e;
+    border-radius: 18px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #b9756e;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: #ca796f;
+    box-shadow: 0 8px 0 #b9756e;
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #b9756e;
+}
+
+/* Wynik */
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #9b624c;
+    gap: 15px;
+}
+
+/* Plansza gry */
+
+canvas {
+    display: block;
+    width: 800px;
+    max-width: 95vw;
+    height: auto;
+    background: #f5e8d5;
+    border: 5px solid #fff4e8;
+    border-radius: 22px;
+    box-shadow:
+        0 7px 0 #dfc1a8,
+        0 12px 25px #9b624c25;
+}
+
+/* Instrukcja sterowania */
+
+.controls {
+    color: #a47d69;
+    font-weight: bold;
+    margin-top: 25px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+/* Wygląd na telefonach */
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .settings {
+        padding: 18px 10px;
+    }
+
+    .settings label {
+        display: flex;
+        flex-direction: column;
+        margin: 14px 0;
+    }
+
+    select {
+        max-width: 100%;
+    }
+
+    .score {
+        font-size: 16px;
+    }
+}
